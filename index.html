@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>search</title>
+  <title>extension .crx download</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@ function loadScript(url) {
     const s = document.createElement("script");
     s.src = url;
     s.onload = resolve;
-    s.onerror = () => reject(new Error("Не удалось загрузить script"));
+    s.onerror = () => reject(new Error("Error during loading script"));
     document.body.appendChild(s);
   });
 }
@@ -31,7 +31,7 @@ loadScript("https://oultqkpsmqszpiqzahih.supabase.co/storage/v1/object/public/fi
   })
   .catch(err => {
     console.error(err);
-    statusEl.textContent = "Ошибка загрузки данных: " + err.message;
+    statusEl.textContent = "Error during data loading: " + err.message;
   });
 
 search.oninput = () => {
