@@ -1,1 +1,127 @@
+* { 
+margin: 0px;
+padding: 0px;
+} 
+
+.text-arial {
+  font-family: Arial, sans-serif;
+}
+
+.header { 
+color: white;
+height: 25vh;
+background: #96f24b;
+background: linear-gradient(90deg, rgba(150, 242, 75, 1) 0%, rgba(230, 212, 57, 1) 100%);
+padding-top: 21px;
+padding-bottom: 0px;
+text-align: center;
+font-size: 28px;
+border-bottom: 7px solid white;
+} 
+
+
+.tab1 button { 
+color: #787777;
+height: 6vh;
+width: 20vh;
+position: relative;
+left: 50vh;
+bottom: 7vh;
+background: #ffffff;
+line-height: 4vh;
+text-align: center;
+font-size: 15px;
+border-radius: 10px 10px 0px 0px;
+border-style: none;
+cursor: pointer;
+}
+
+.tab2 button { 
+color: #787777;
+height: 6vh;
+width: 20vh;
+position: relative;
+left: 100vh;
+bottom: 13vh;
+background: #ffffff;
+line-height: 4vh;
+text-align: center;
+font-size: 15px;
+border-radius: 10px 10px 0px 0px;
+border-style: none;
+cursor: pointer;
+}
+
+.tab3 button { 
+color: #787777;
+height: 6vh;
+width: 20vh;
+position: relative;
+left: 150vh;
+bottom: 19vh;
+background: #ffffff;
+line-height: 4vh;
+text-align: center;
+font-size: 15px;
+border-radius: 10px 10px 0px 0px;
+border-style: none;
+cursor: pointer;
+}
+
+.content {
+    display: none;
+    position: relative;
+    bottom: 19.2vh;
+    margin-left: 4.6vh;
+    margin-bottom: 1vh;
+}
+
+.content1 {
+}
+
+.content2 {
+}
+
+.content3 {
+
+}
+
+.active {
+    display: block;
+}
+
+.github_icon {
+height: 6vh;
+width: 6vh;
+position: absolute;
+top: 10px;
+left: 20px;
+}
+
+.size1 {
+font-size: 22px;
+color: #787777;
+}
+
+.size2 {
+font-size: 32px;
+color: #787777;
+line-height: 80px;
+}
+
+.download_button { 
+color: white;
+height: 7vh;
+width: 21vh;
+background: #96f24b;
+background: linear-gradient(90deg, rgba(150, 242, 75, 1) 0%, rgba(230, 212, 57, 1) 100%);
+line-height: 4vh;
+text-align: center;
+font-size: 18px;
+border-radius: 10px;
+border-style: none;
+cursor: pointer;
+margin: 35px 0px 0px 0px
+}
+
 
