@@ -3,6 +3,10 @@ margin: 0px;
 padding: 0px;
 } 
 
+body {
+    background-color: #0f141d;
+}
+
 .text-arial {
   font-family: Arial, sans-serif;
 }
@@ -10,13 +14,13 @@ padding: 0px;
 .header { 
 color: white;
 height: 25vh;
-background: #96f24b;
-background: linear-gradient(90deg, rgba(150, 242, 75, 1) 0%, rgba(230, 212, 57, 1) 100%);
+background: #4984eb;
+background: linear-gradient(90deg,rgba(73, 132, 235, 1) 0%, rgba(79, 84, 196, 1) 50%);
 padding-top: 21px;
 padding-bottom: 0px;
 text-align: center;
 font-size: 5vh;
-border-bottom: 7px solid white;
+border-bottom: 3px solid white;
 } 
 
 .tabs {
@@ -32,8 +36,8 @@ border-bottom: 7px solid white;
 .tabs button {
     flex: 1;
     height: 6vh;
-    background: white;
-    color: #787777;
+    background: #0f141d;
+    color: whitesmoke;
 
     font-size: 2.5vh;
     border-radius: 10px 10px 0 0;
@@ -46,18 +50,8 @@ border-bottom: 7px solid white;
     display: none;
     margin: 0 5%;
     padding: 20px;
-    background: white;
+    background: #0f141d;
     border-radius: 0 10px 10px 10px;
-}
-
-.content1 {
-}
-
-.content2 {
-}
-
-.content3 {
-
 }
 
 .active {
@@ -74,12 +68,13 @@ left: 20px;
 
 .size1 {
 font-size: 3.1vh;
-color: #787777;
+color: whitesmoke
 }
 
 .size2 {
 font-size: 4.1vh;
-color: #787777;
+color: #4984eb;
+color: linear-gradient(90deg,rgba(73, 132, 235, 1) 0%, rgba(79, 84, 196, 1) 50%);
 line-height: 80px;
 }
 
@@ -102,3 +97,54 @@ margin: 35px 0px 0px 0px
     margin-top: 0;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tile {
+    display: flex;
+background: #2756a8;
+background: linear-gradient(90deg,rgba(39, 86, 168, 1) 0%, rgba(79, 84, 196, 0.09) 50%);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+.tile img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: whitesmoke
+}
+
+.desc {
+    font-size: 14px;
+    color: whitesmoke
+}
+
+.tile-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tile-link:hover .tile {
+    transform: scale(1.02);
+    transition: 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
