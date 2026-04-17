@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * { 
 margin: 0px;
 padding: 0px;
@@ -5,6 +7,7 @@ padding: 0px;
 
 body {
     background-color: #0f141d;
+    font-family: 'Roboto', sans-serif;
 }
 
 .text-arial {
