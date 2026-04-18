@@ -3,15 +3,27 @@ extensions = {"1":["boxel_rebound", "https://clients2.google.com/service/update2
 
 while True:
     print("\nVersion: 1.4.0", "\nYou can enter q anytime to return to main menu. \nChoose mode: \n", "1 - Download from featured extensions (21 extensions) \n", "2 - Download by webstore link\n")
-    mode = int(input())
+    mode = 0
+    while mode == 0:
+        try: 
+            mode = int(input())
+        except ValueError:
+            print("Invalid mode selection! Try again.\n")
     if mode == 1:
         print("\n", " ◈Recommended◈ \n", "1 - Boxel Rebound \n", "2 - TurboVPN \n", "3 - UBlockOrigin Lite \n", " ◈Games◈ \n", "4 - Boxel Rebound \n", "5 - Boxel 3D \n", "6 - Boxel Golf \n", "7 - Helix Fruit Jump \n", "8 - Maze \n", "9 - Stacker (Tetris-like) \n", "10 - Trixel (Tetris-like) \n", "11 - Table Tennis (Ping-pong) \n", "12 - Table Tennis Workout (Solo ping-pong) \n", "13 - Tiny Tycoon \n", "14 - Arcade Classics \n", "15 - Watermelon Game \n", "16 - Ultimate Car Driving Game \n", "17 - Toy Car Driving Game \n", "18 - 2048 \n", " ◈VPNs◈ \n", "19 - TurboVPN \n", "20 - VeePN \n", "21 - BrowsecVPN \n", "22 - ProtonVPN \n", " ◈Utilities◈ \n", "23 - UBlockOrigin Lite \n",) 
         while True:
-            ext_sel = str(input())
+            ext_sel = -1
+            while ext_sel == -1:
+                try:
+                    ext_sel = str(input())
+                    if ext_sel == "q":
+                        break
+                    else:
+                        print("\n", extensions[ext_sel][1])
+                except KeyError:
+                    print("Invalid selection! Try again.\n")
             if ext_sel == "q":
                 break
-            else:
-                print("\n", extensions[ext_sel][1])
 
     if mode == 2:
         while True:
@@ -22,4 +34,4 @@ while True:
             ext_sep2 = ext_sep1[-1]
             ext_sep3 = ext_sep2.split("?")
             ext_id = ext_sep3[0]
-            print("\nhttps://clients2.google.com/service/update2/crx?response=redirect&prodversion=122.0&acceptformat=crx2,crx3&x=id%3D", ext_id, "%26installsource%3Dondemand%26uc", sep="")
+            print("https://clients2.google.com/service/update2/crx?response=redirect&prodversion=122.0&acceptformat=crx2,crx3&x=id%3D", ext_id, "%26installsource%3Dondemand%26uc", sep="")
