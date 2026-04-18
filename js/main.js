@@ -2,25 +2,9 @@ const search = document.getElementById("search");
 const results = document.getElementById("results");
 const statusEl = document.getElementById("status");
 
-let EXTENSIONS_DATA = [];
-
-async function loadExtensionsData() {
-    try {
-        const response = await fetch('data/extensions.json');
-        const json = await response.json();
-        EXTENSIONS_DATA = json.extensions || [];
-        console.log(`Загружено ${EXTENSIONS_DATA.length} расширений`);
-        
-        renderExtensions("all");
-    } catch (error) {
-        console.error("Ошибка загрузки extensions.json:", error);
-        statusEl.textContent = "Ошибка загрузки данных расширений";
-    }
-}
-
 function renderExtensions(category = "all") {
     const grid = document.getElementById("extensions-grid");
-    if (!grid) return;
+    if (!grid || EXTENSIONS_DATA.length === 0) return;
     
     grid.innerHTML = "";
 
@@ -77,7 +61,7 @@ function loadScript(url) {
 }
 
 window.addEventListener('load', () => {
-    loadExtensionsData();
+    renderExtensions("all");
     initFilters();
 
     loadScript("https://github.com/Lutsic/crx-extension-downloader/releases/download/release/data.js")
