@@ -33,7 +33,33 @@ function renderExtensions(category = "all") {
     }
 }
 
-function initFilters() {
+function renderThemes() {
+    const grid = document.getElementById("themes-grid");
+    if (!grid) return;
+    grid.innerHTML = "";
+
+    THEMES_DATA.forEach(item => {
+        const a = document.createElement("a");
+        a.href = `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=122.0&acceptformat=crx2,crx3&x=id%3D${item.id}%26installsource%3Dondemand%26uc`;
+        a.className = "tile-link";
+        a.innerHTML = `
+            <div class="tile">
+                <img src="${item.img}" alt="${item.title}">
+                <div class="text">
+                    <div class="title">${item.title}</div>
+                    <div class="desc"></div>
+                </div>
+            </div>
+        `;
+        grid.appendChild(a);
+    });
+
+    if (THEMES_DATA.length === 0) {
+        grid.innerHTML = `<p style="color:#fff; grid-column:1/-1; text-align:center; padding:40px;">Тем пока нет 😢</p>`;
+    }
+}
+
+function initExtensionFilters() {
     const buttons = document.querySelectorAll('.filter-btn');
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -61,8 +87,12 @@ function loadScript(url) {
 }
 
 window.addEventListener('load', () => {
+
     renderExtensions("all");
-    initFilters();
+    renderThemes();
+
+
+    initExtensionFilters();
 
     loadScript("https://github.com/Lutsic/crx-extension-downloader/releases/download/release/data.js")
         .then(() => {
