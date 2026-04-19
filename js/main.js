@@ -29,7 +29,7 @@ function renderExtensions(category = "all") {
     });
 
     if (filtered.length === 0) {
-        grid.innerHTML = `<p style="color: #fff; grid-column: 1 / -1; text-align: center; padding: 40px;">В этой категории пока ничего нет 😢</p>`;
+        grid.innerHTML = `<p style="color: #fff; grid-column: 1 / -1; text-align: center; padding: 40px;">...</p>`;
     }
 }
 
@@ -55,7 +55,7 @@ function renderThemes() {
     });
 
     if (THEMES_DATA.length === 0) {
-        grid.innerHTML = `<p style="color:#fff; grid-column:1/-1; text-align:center; padding:40px;">Тем пока нет 😢</p>`;
+        grid.innerHTML = `<p style="color:#fff; grid-column:1/-1; text-align:center; padding:40px;">...</p>`;
     }
 }
 
