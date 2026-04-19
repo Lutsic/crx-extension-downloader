@@ -67,4 +67,14 @@ const EXTENSIONS_DATA = [
     { id: "bggfcpfjbdkhfhfmkjpbhnkhnpjjeomc", title: "Material Icons for GitHub", desc: "Material icons for the file browser of popular websites like GitHub, Azure, Bitbucket etc.", img: "img/66.png", category: "ui" },
     { id: "oiekdmlabennjdpgimlcpmphdjphlcha", title: "Tripadvisor", desc: "Find the best hotels, restaurants, and attractions worldwide with trusted Tripadvisor reviews.", img: "img/67.png", category: "utils" },
     { id: "ndpldekfjnbjhflkfgncpphppofkcnkl", title: "Wordle Game", desc: "Wordle is a web-based word game. Play Wordle here online for free!", img: "img/68.png", category: "games" },
+    { id: "lkmnhgalhcdimcbhngcmhfcjpmdphkdh", title: "Pinterest - LIGHT & DARK THEMES", desc: "Apply different themes to Pinterest web version.", img: "img/69.png", category: "ui" },
+    { id: "ngonfifpkpeefnhelnfdkficaiihklid", title: "ProtonDB for Steam", desc: "Adds the ProtonDB rating to games in the Steam store.", img: "img/70.png", category: "utils" },
+    { id: "jplgfhpmjnbigmhklmmbgecoobifkmpa", title: "Proton VPN", desc: "Secure your internet and protect your online privacy in one click.", img: "img/71.png", category: "vpn" },
+    { id: "abikfbojmghmfjdjlbagiamkinbmbaic", title: "Equalizer for Chrome", desc: "Equalizer for your Browser.", img: "img/72.png", category: "utils" },
+    { id: "hlkljlkdinjnbfmclionhbefbnefcgll", title: "Microsoft to Microslop", desc: "Replaces every mention of 'Microsoft' with 'Microslop'.", img: "img/73.png", category: "utils" },
+    { id: "acjecbgflnhmeldadcbblhfdimhifpki", title: "Custom Calendar Background", desc: "Adds background images to Google Calendar.", img: "img/74.png", category: "ui" },
+    { id: "jjicbefpemnphinccgikpdaagjebbnhg", title: "CSFloat Market Checker", desc: "Shows the float value, paint seed, and more of CS2 items on the Steam Market.", img: "img/75.png", category: "utils" },
+    { id: "ponfpcnoihfmfllpaingbgckeeldkhle", title: "Enhancer for YouTube™", desc: "Take control of YouTube and boost your user experience!", img: "img/76.png", category: "social" },
+    { id: "mmioliijnhnoblpgimnlajmefafdfilb", title: "Shazam", desc: "Find song names from your browser.", img: "img/77.png", category: "utils" },
+    { id: "efaidnbmnnnibpcajpcglclefindmkaj", title: "Adobe Acrobat", desc: "PDF edit, convert, sign tools.", img: "img/78.png", category: "utils" }
 ];
