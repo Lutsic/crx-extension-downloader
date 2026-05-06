@@ -8,6 +8,11 @@ padding: 0px;
 body {
     background-color: #0f141d;
     font-family: 'Roboto', sans-serif;
+    background-image: url('../img/background.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
 }
 
 .header { 
@@ -86,6 +91,7 @@ a {
     align-items: start;      
     align-content: start;
     padding-right: 10px;
+    background: none;
 }
 
 .tile {
@@ -137,8 +143,7 @@ a {
 
 .extensions-container {
     display: flex;
-gap: 30px;
-    margin: 0 0.000005%;
+    gap: 30px;
     padding: 10px 0;
 }
 
