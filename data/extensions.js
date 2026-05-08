@@ -77,6 +77,22 @@ const EXTENSIONS_DATA = [
     { id: "ponfpcnoihfmfllpaingbgckeeldkhle", title: "Enhancer for YouTube™", desc: "Take control of YouTube and boost your user experience!", img: "img/76.png", category: "social" },
     { id: "mmioliijnhnoblpgimnlajmefafdfilb", title: "Shazam", desc: "Find song names from your browser.", img: "img/77.png", category: "utils" },
     { id: "efaidnbmnnnibpcajpcglclefindmkaj", title: "Adobe Acrobat", desc: "PDF edit, convert, sign tools.", img: "img/78.png", category: "utils" },
+    { id: "mbecjoeblefjbagpdeleghnmlnmhejid", title: "Stellar Mod For Slither.io", desc: "Custom skins, zoom, minimap, FPS boost, bot mode, & more.", img: "img/79.png", category: "games" },
+    { id: "kkaneedgomgliclbnamedjoknagffnfe", title: "VeiloVPN", desc: "Fast, private VPN for Chrome. Route traffic through encrypted servers in 15+ countries.", img: "img/80.png", category: "vpn" },
+    { id: "jghecgabfgfdldnmbfkhmffcabddioke", title: "Volume Master", desc: "The simplest and most reliable volume booster.", img: "img/81.png", category: "utils" },
+    { id: "bpoadfkcbjbfhfodiogcnhhhpibjhbnh", title: "Immersive Translate", desc: "Translate PDF & Epub eBook, Translate Video Subtitles in Bilingual.", img: "img/82.png", category: "utils" },
+    { id: "ogdlpmhglpejoiomcodnpjnfgcpmgale", title: "Custom Cursor for Chrome™", desc: "Use a large collection of free cursors or upload your own.", img: "img/83.png", category: "ui" },
+    { id: "nngceckbapebfimnlniiiahkandclblb", title: "Bitwarden Password Manager", desc: "Bitwarden easily secures all your passwords, passkeys, and sensitive information", img: "img/84.png", category: "vpn" },
+    { id: "ejkiikneibegknkgimmihdpcbcedgmpo", title: "Volume Booster", desc: "Chrome Extension for Boosting Volume Past Max Settings", img: "img/85.png", category: "utils" },
+    { id: "bmjmipppabdlpjccanalncobmbacckjn", title: "Cursor Style", desc: "Custom Mouse Cursors & Trails for Chrome™", img: "img/86.png", category: "ui" },
+    { id: "bnjlijllccbbjdeiflmakhkijbdddflj", title: "Sweezy Bar for Youtube™", desc: "Swap the borring progress bar with funky animations & colors.", img: "img/87.png", category: "ui" },
+    { id: "ajhbdcgfhlhhmocddefknjjkejcfpbnj", title: "Allow Copy +", desc: "Allow copying. Remove copy protection.", img: "img/88.png", category: "utils" },
+    { id: "kdpelmjpfafjppnhbloffcjpeomlnpah", title: "WPS PDF", desc: "Read, Edit, Fill, Convert, and AI Chat PDF with Ease", img: "img/89.png", category: "utils" },
+    { id: "mjbepbhonbojpoaenhckjocchgfiaofo", title: "Ace Script", desc: "Everything can be scripted, allowing your browser to do more!", img: "img/90.png", category: "utils" },
+    { id: "fbeffbjdlemaoicjdapfpikkikjoneco", title: "Scratch Addons", desc: "Provides customizable features and themes for the scratch.mit.edu", img: "img/91.png", category: "utils" },
+    { id: "eanggfilgoajaocelnaflolkadkeghjp", title: "HARPA AI", desc: "Web Automation with ChatGPT, Claude, Gemini, Grok", img: "img/92.png", category: "utils" },
+
+
 // Themes
     { id: "mmnhcbnpepcphnogcmpdfdkheloapcpj", title: "Dark Angel", desc: "", img: "img/1t.png", category: "themes" },
     { id: "nfamepnomifmcmdlmppeijahndpfcnfh", title: "Forest environment", desc: "", img: "img/2t.png", category: "themes" },
