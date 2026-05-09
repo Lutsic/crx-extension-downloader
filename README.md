@@ -1,6 +1,6 @@
 ## **CRX Extension Downloader**
 
-**CRX Extension Downloader** is a lightweight and efficient tool designed to retrieve `.crx` files of extensions on Chrome Web Store.
+**CRX Extension Downloader** is a lightweight and efficient tool designed to download Chrome and Firefox extensions without offcial stores.
 
 ### **🌟 Key Features**
 
@@ -18,7 +18,7 @@
 
 #### **2\. Global Search**
 
-Search through a database of over **250,000** extensions.
+Search through a database of over **250,000** chrome extensions.
 
 * Enable the **"Global Search"** checkbox below the search box.  
 * **Note:** The search targets the extension's slug (the name used in the Chrome Web Store URL). It may slightly differ from the display name.
