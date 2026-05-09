@@ -73,6 +73,29 @@ function loadScript(url) {
     });
 }
 
+function filterTiles(query) {
+    const grid = document.getElementById("extensions-grid");
+    if (!grid) return;
+
+    const q = query.toLowerCase().trim();
+    const tiles = grid.querySelectorAll('.tile-link');
+
+    let visibleCount = 0;
+
+    tiles.forEach(tile => {
+        const title = tile.querySelector('.title').textContent.toLowerCase();
+        const desc = tile.querySelector('.desc').textContent.toLowerCase();
+        
+        if (q === "" || title.includes(q) || desc.includes(q)) {
+            tile.style.display = "";
+            visibleCount++;
+        } else {
+            tile.style.display = "none";
+        }
+    });
+
+
+}
 
 
 window.addEventListener('load', () => {
@@ -132,6 +155,8 @@ window.addEventListener('load', () => {
                     if (++count >= 50) break;
                 }
             }
+        } else {
+            filterTiles(q);
         }
     };
 
