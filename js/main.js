@@ -5,21 +5,35 @@ const searchInput = document.getElementById("search");
 const globalToggle = document.getElementById("global-toggle");
 const grid = document.getElementById("extensions-grid");
 const filtersPanel = document.getElementById("filters-panel");
+const firefoxToggle = document.getElementById("firefox-toggle");
+const firefoxStatus = document.getElementById("firefox-status");
+
+let isFirefoxMode = false;
 
 
 function renderExtensions(category = "all") {
     const grid = document.getElementById("extensions-grid");
-    if (!grid || EXTENSIONS_DATA.length === 0) return;
-    
+    if (!grid) return;
+
     grid.innerHTML = "";
 
+    let dataToUse = isFirefoxMode ? EXTENSIONS_FF_DATA : EXTENSIONS_DATA;
+
     const filtered = category === "all" 
-        ? EXTENSIONS_DATA 
-        : EXTENSIONS_DATA.filter(item => item.category === category);
+        ? dataToUse 
+        : dataToUse.filter(item => item.category === category);
 
     filtered.forEach(item => {
         const a = document.createElement("a");
-        a.href = `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=122.0&acceptformat=crx2,crx3&x=id%3D${item.id}%26installsource%3Dondemand%26uc`;
+        
+        if (isFirefoxMode) {
+            // Firefox mode
+            a.href = item.link;
+        } else {
+            // Chrome mode
+            a.href = `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=122.0&acceptformat=crx2,crx3&x=id%3D${item.id}%26installsource%3Dondemand%26uc`;
+        }
+
         a.className = "tile-link";
         a.innerHTML = `
             <div class="tile ${item.category}">
@@ -34,7 +48,7 @@ function renderExtensions(category = "all") {
     });
 
     if (filtered.length === 0) {
-        grid.innerHTML = `<p style="color: #fff; grid-column: 1 / -1; text-align: center; padding: 40px;">...</p>`;
+        grid.innerHTML = `<p style="color: #fff; grid-column: 1 / -1; text-align: center; padding: 40px;">No extensions(</p>`;
     }
 }
 
@@ -63,49 +77,61 @@ function loadScript(url) {
 
 window.addEventListener('load', () => {
 
-    renderExtensions("all");
+    
+    isGlobalSearch = false;
+    isFirefoxMode = false;
 
+    
+    renderExtensions("all");
     initExtensionFilters();
 
-// Global search checkbox
+    // Global search toggle
     globalToggle.addEventListener('change', () => {
         isGlobalSearch = globalToggle.checked;
-
+        
         if (isGlobalSearch) {
             grid.style.display = "none";
-//            globalContainer.style.display = "block";
             results.style.display = "block";
         } else {
             grid.style.display = "grid";
- //           globalContainer.style.display = "none";
-             results.style.display = "none";
-             renderExtensions("all"); 
+            results.style.display = "none";
+            renderExtensions("all");
         }
     });
 
-    // search
-   globalContainer.oninput = () => {
+    // Firefox mode toggle
+    firefoxToggle.addEventListener('change', () => {
+        isFirefoxMode = firefoxToggle.checked;
+
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.category === "all") btn.classList.add('active');
+        });
+
+        renderExtensions("all");
+    });
+
+    // Global search input
+    globalContainer.oninput = () => {
         const q = globalContainer.value.toLowerCase();
         results.innerHTML = "";
         if (typeof DATA === "undefined" || !q) return;
 
-        if (isGlobalSearch){
-        let count = 0;
-        for (const name in DATA) {
-            if (name.toLowerCase().includes(q)) {
-                const li = document.createElement("li");
-                const a = document.createElement("a");
-                a.textContent = name;
-                a.href = DATA[name];
-                a.target = "_blank";
-                li.appendChild(a);
-                results.appendChild(li);
-                if (++count >= 50) break;
-       
-    }   else {
-    
-        }
-        }
+        if (isGlobalSearch) {
+            let count = 0;
+            for (const name in DATA) {
+                if (name.toLowerCase().includes(q)) {
+                    const li = document.createElement("li");
+                    const a = document.createElement("a");
+                    a.textContent = name;
+                    a.href = DATA[name];
+                    a.target = "_blank";
+                    li.appendChild(a);
+                    results.appendChild(li);
+                    if (++count >= 50) break;
+                }
+            }
         }
     };
 
