@@ -1,6 +1,6 @@
 ## **CRX Extension Downloader**
 
-**CRX Extension Downloader** is a lightweight and efficient tool designed to download Chrome and Firefox extensions without offcial stores.
+**CRX Extension Downloader** is a lightweight and efficient tool designed to download Chrome and Firefox extensions without official stores.
 
 ### **🌟 Key Features**
 
