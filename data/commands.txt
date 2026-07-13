@@ -1,2 +1,1 @@
-get_all_files
-upload_all_files
+C:\Users\lutsi\Documents\1234\Ancient_Egypt_Pack\assets\arts\EGYPT.jpg
